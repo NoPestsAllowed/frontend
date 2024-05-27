@@ -21,10 +21,15 @@ function Resolution({ params }) {
             <h1>Un déposition signalant la présence de nuisible à été réalisé à votre encontre !</h1>
             {deposition && (
                 <div>
-                    <div>depo name : {deposition.name}</div>
-                    <div>depo created at : {deposition.createdAt}</div>
-                    <div>depo address : {deposition.placeId.address}</div>
-                    {/* <div>depo name : {deposition.name}</div> */}
+                    <div>
+                        <div>depo name : {deposition.name}</div>
+                        <div>depo created at : {deposition.createdAt}</div>
+                        <div>depo address : {deposition.placeId.address}</div>
+                        {/* <div>depo name : {deposition.name}</div> */}
+                    </div>
+                    <div>
+                        <span>Download app</span> <span>Create account</span>
+                    </div>
                 </div>
             )}
         </div>
