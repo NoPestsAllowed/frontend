@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NoPestsAllowed : Say stop to bedbugs, flea, bettles...
 
-## Getting Started
+## Frontend
 
-First, run the development server:
+This Repository contain the frontend allowing place owner to resolve deposition.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About NoPestsAllowed
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+NoPestsAllowed aim to provide worldwide application to centralize deposition about pests. Each deposition is verified by picture and user location. The Picture is geolocalised in order to define the deposition location. The picture must be a visual proof showing pests or many depositions against a place.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Roadmap for NoPestsAllowed
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Let's build our MVP then we will see.
 
-## Learn More
+<!-- ## NoPestsAllowed Sponsors
 
-To learn more about Next.js, take a look at the following resources:
+We are a small community, we dedicate as much time as we can to improve NoPestsAllowed. You can support us throught sponsorship. -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Code of Conduct
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We hate pests but we love people. If you don't share our mind go away !
 
-## Deploy on Vercel
+## Security Vulnerabilities
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you discover a security vulnerability within NoPestsAllowed, please send an e-mail. All security vulnerabilities will be promptly addressed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+NoPestsAllowed is closed source at this moment, we will opensource codebase when we have enough customers.
+
+## Thanks
+
+We are gratefull to all OSS mainteners.
