@@ -18,6 +18,8 @@ function Resolution({ params }) {
             .then((data) => {
                 console.log("data", data);
                 setDeposition(data.deposition);
+                console.log(data.deposition.status);
+                setMessageSent((sent) => data.deposition.status === "resolved");
             });
     }, []);
 
@@ -38,6 +40,7 @@ function Resolution({ params }) {
                     setMessageSent(true);
                 } else {
                     setMessageSent(false);
+                    alert(data.error);
                 }
             })
             .catch((err) => console.error(err));
@@ -69,10 +72,12 @@ function Resolution({ params }) {
                         </div>
                         <div>
                             {deposition &&
-                                deposition.visualProofs.map((photo) => {
+                                deposition.visualProofs.map((photo, index) => {
                                     console.log(photo.url);
                                     return (
                                         <Image
+                                            key={index}
+                                            alt={deposition.name}
                                             src={photo.url}
                                             className="dark:invert"
                                             width={100}
@@ -94,9 +99,9 @@ function Resolution({ params }) {
                         </div>
                     </div>
 
-                    {messageSent ? (
-                        <div class="col-span-6 mt-4 sm:col-span-4">
-                            <div class="mt-12">
+                    {!messageSent ? (
+                        <div className="col-span-6 mt-4 sm:col-span-4">
+                            <div className="mt-12">
                                 <input
                                     type="file"
                                     ref={hiddenFileInput}
@@ -113,17 +118,17 @@ function Resolution({ params }) {
                                     Upload file
                                 </button>
                             </div>
-                            <div class="mt-8">
+                            <div className="mt-8">
                                 <label
-                                    class="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
-                                    for="content"
+                                    className="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
+                                    htmlFor="content"
                                 >
                                     Dites nous quelques mots à propos de cette infestation
                                 </label>
                                 <textarea
                                     value={content}
                                     onChange={(e) => setContent(e.target.value)}
-                                    class="block h-44 w-full rounded-md border border-gray-300 text-gray-900 shadow-sm placeholder:text-gray-700 focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-600 dark:text-gray-300 dark:placeholder:text-gray-500 sm:text-sm"
+                                    className="block h-44 w-full rounded-md border border-gray-300 text-gray-900 shadow-sm placeholder:text-gray-700 focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-600 dark:text-gray-300 dark:placeholder:text-gray-500 sm:text-sm"
                                 ></textarea>
 
                                 <div className="text-right mt-8">
