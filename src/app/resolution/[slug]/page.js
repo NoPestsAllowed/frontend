@@ -54,6 +54,9 @@ function Resolution({ params }) {
         const img = event.target.files[0];
         setFiles((files) => [...files, img]);
     };
+    const removeImage = (photo) => {
+        setFiles((files) => files.filter((file) => file.name !== photo.name));
+    };
     console.log(files);
     return (
         <div>
@@ -117,6 +120,30 @@ function Resolution({ params }) {
                                 >
                                     Upload file
                                 </button>
+
+                                <div className="mt-4">
+                                    {files.length > 0 && (
+                                        <div className="italic font-thin my-2">
+                                            Clickez sur une image pour la supprimer
+                                        </div>
+                                    )}
+                                    {files.length > 0 &&
+                                        files.map((photo, index) => {
+                                            console.log(photo);
+                                            return (
+                                                <Image
+                                                    key={index}
+                                                    alt={deposition.name}
+                                                    src={URL.createObjectURL(photo)}
+                                                    className="dark:invert"
+                                                    width={100}
+                                                    height={150}
+                                                    priority
+                                                    onClick={() => removeImage(photo)}
+                                                />
+                                            );
+                                        })}
+                                </div>
                             </div>
                             <div className="mt-8">
                                 <label
