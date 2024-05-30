@@ -3,17 +3,17 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer class="bg-white dark:bg-gray-800">
-            <div class="mx-auto max-w-7xl px-6 py-6 md:flex md:items-center md:justify-between lg:px-8">
-                <div class="mt-8 md:order-1 md:mt-0">
-                    <p class="text-center text-xs leading-5 text-gray-500 dark:text-gray-200">
+        <footer className="bg-white dark:bg-gray-800">
+            <div className="mx-auto max-w-7xl px-6 py-6 md:flex md:items-center md:justify-between lg:px-8">
+                <div className="mt-8 md:order-1 md:mt-0">
+                    <p className="text-center text-xs leading-5 text-gray-500 dark:text-gray-200">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            class="inline h-3 w-3"
+                            className="inline h-3 w-3"
                         >
                             <path
                                 stroke-linecap="round"
@@ -39,7 +39,7 @@ function Footer() {
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            class="inline h-3 w-3"
+                            className="inline h-3 w-3"
                         >
                             <path
                                 stroke-linecap="round"
